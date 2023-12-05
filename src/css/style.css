@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url("../../assets/fonts/WorkSans-VariableFont_wght.ttf") format("truetype");
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "WorkSans";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8eeff;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ilustration-top {
+  background-color: #301534;
+  height: 32rem;
+  background-image: url(../../assets/images/background-pattern-desktop.svg);
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.FAQs {
+  background-color: #fff;
+  width: 100%;
+  max-width: 60rem;
+  border-radius: 1.6rem;
+  z-index: 999;
+  padding: 4rem;
+}
+.FAQs__title {
+  display: flex;
+  gap: 2.4rem;
+}
+.FAQs__title-text {
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: #301534;
+}
+.FAQs__title-icon {
+  font-size: 6rem;
+}
+.FAQs__questions {
+  margin-top: 3rem;
+}
+
+.FAQs__question-box {
+  list-style: none;
+  font-size: 1.8rem;
+  padding: 2.4rem 0;
+}
+.FAQs__question-box:not(:last-child) {
+  border-bottom: 1px solid #f8eeff;
+}
+
+.FAQs__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+}
+
+.answer {
+  /* opacity: 0; */
+  transform: translateY(-80%);
+  transition: all 3s ease-in;
+  z-index: 8;
+  display: none;
+}
+
+.answer.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.3s;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn:active {
+  transform: scale(0.95);
+}
+.btn--show-less {
+  display: none;
+}
+
+.main-heading {
+  color: #301534;
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.question {
+  color: #301534;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.answer {
+  color: #8b6990;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/*# sourceMappingURL=style.css.map */
