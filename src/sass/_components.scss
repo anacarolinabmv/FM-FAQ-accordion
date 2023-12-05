@@ -3,17 +3,13 @@
   background-color: transparent;
   cursor: pointer;
   transition: transform 0.2s, opacity 0.3s;
+  height: 3rem;
+  width: 3rem;
 
   &:hover {
     opacity: 0.8;
   }
   &:active {
     transform: scale(0.95);
-  }
-
-  &--show-more {
-  }
-  &--show-less {
-    display: none;
   }
 }

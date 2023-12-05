@@ -1,8 +1,17 @@
 'use strict';
 
-const btn = document.querySelector('.show-more');
+const FAQsContainer = document.querySelector('.FAQs');
 
-btn.addEventListener('click', function (e) {
-  const answer = e.target.closest('.question').querySelector('.answer');
-  answer.classList.toggle('show');
+FAQsContainer.addEventListener('click', function (e) {
+  const accordion = e.target.closest('.FAQs__accordion');
+  const answer = accordion.querySelector('.FAQs__accordion--answer');
+
+  if (!accordion) return;
+  accordion.classList.toggle('open');
+
+  if (accordion.classList.contains('open')) {
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+  } else {
+    answer.style.maxHeight = 0;
+  }
 });
