@@ -54,7 +54,6 @@ body {
 }
 .FAQs__title-text {
   font-size: 6rem;
-  text-transform: uppercase;
   color: #301534;
 }
 .FAQs__title-icon {
@@ -94,12 +93,8 @@ body {
   transition: max-height 0.4s ease-out;
 }
 
-.FAQs__accordion.open .btn {
+.FAQs__accordion--question.open .btn {
   background-image: url(../../assets/images/icon-minus.svg);
-}
-
-.FAQs__accordion.open .FAQs__accordion--answer {
-  height: 100px;
 }
 
 .btn {
