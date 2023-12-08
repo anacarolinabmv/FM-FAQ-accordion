@@ -35,7 +35,9 @@ FAQsContainer.addEventListener('click', function (e) {
 
   if (accordionQuestion.classList.contains('open')) {
     answer.style.maxHeight = answer.scrollHeight + 'px';
+    answer.style.marginTop = '2.4rem';
   } else {
     answer.style.maxHeight = 0;
+    answer.style.marginTop = '0';
   }
 });

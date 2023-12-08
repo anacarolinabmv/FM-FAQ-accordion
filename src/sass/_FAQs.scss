@@ -6,8 +6,13 @@
   z-index: 999;
   padding: 4rem;
 
+  @media (max-width: $phone) {
+    padding: 2.4rem;
+  }
+
   &__title {
     display: flex;
+    align-items: center;
     gap: 2.4rem;
 
     &-text {
@@ -16,12 +21,19 @@
     }
 
     &-icon {
-      font-size: 6rem;
+      @media (max-width: $phone) {
+        height: 2.4rem;
+        width: 2.4rem;
+      }
     }
   }
 
   &__questions {
-    margin-top: 3rem;
+    margin-top: 3.2rem;
+
+    @media (max-width: $phone) {
+      margin-top: 2.4rem;
+    }
   }
 
   &__accordion {
@@ -29,7 +41,7 @@
     font-size: 1.8rem;
     padding: 2.4rem 0;
 
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       border-bottom: 1px solid $light-pink;
     }
   }
@@ -41,6 +53,7 @@
     gap: 2rem;
     z-index: 99;
     position: relative;
+    // background-color: blue;
 
     .question {
       &:hover {
@@ -59,10 +72,15 @@
   &__accordion--answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
+    transition: all 0.3s ease-out;
+    // background-color: red;
   }
 }
 
 .FAQs__accordion--question.open .btn {
   background-image: url(../../assets/images/icon-minus.svg);
+}
+
+.FAQs__accordion--question.open ~ .FAQs__accordion--answer {
+  // margin-top: 2.4rem;
 }
