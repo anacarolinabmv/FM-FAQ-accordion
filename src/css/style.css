@@ -44,6 +44,11 @@ body {
   left: 0;
   width: 100%;
 }
+@media (max-width: 31.25em) {
+  .ilustration-top {
+    background-image: url(../../assets/images/background-pattern-mobile.svg);
+  }
+}
 
 .FAQs {
   background-color: #fff;
